@@ -28,8 +28,17 @@ RUN git clone git://git.osmocom.org/rtl-sdr.git \
 RUN wget https://flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piaware-support/piaware-repository_4.0_all.deb \
     && sudo dpkg -i piaware-repository_4.0_all.deb
 
+RUN git clone https://github.com/Nuand/bladeRF.git \
+    && cd bladeRF \
+    && dpkg-buildpackage -b
+    && sudo dpkg -i bladeRF.deb
+
 RUN sudo apt-get update
-RUN sudo apt-get install dump1090-fa
+RUN sudo apt-get install librtlsdr-dev
+RUN git clone https://github.com/adsbxchange/dump1090-fa.git \
+    && cd 
+    && dpkg-buildpackage -b \
+    && sudo dpkg -i dump1090-fa.deb
 
 EXPOSE 8080
 EXPOSE 30001
