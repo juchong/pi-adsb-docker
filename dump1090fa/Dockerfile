@@ -17,7 +17,8 @@ RUN apt-get update -qy \
     doxygen libtecla-dev \
     libtecla-dev \
     libncurses5-dev \
-    help2man pandoc
+    help2man pandoc \
+    debhelper
 
 # not needed to run dump1090-fa but could be useful for debugging issues
 RUN git clone git://git.osmocom.org/rtl-sdr.git \
