@@ -36,7 +36,7 @@ RUN git clone https://github.com/Nuand/bladeRF.git \
 RUN sudo apt-get update
 RUN sudo apt-get install librtlsdr-dev
 RUN git clone https://github.com/adsbxchange/dump1090-fa.git \
-    && cd 
+    && cd \
     && dpkg-buildpackage -b \
     && sudo dpkg -i dump1090-fa.deb
 
