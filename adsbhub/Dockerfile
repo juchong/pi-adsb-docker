@@ -1,4 +1,4 @@
-FROM balenalib/debian:buster
+FROM balenalib/amd64-debian:buster
 
 WORKDIR /root
 
