@@ -30,7 +30,7 @@ RUN wget https://flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piaw
 
 RUN git clone https://github.com/Nuand/bladeRF.git \
     && cd bladeRF \
-    && dpkg-buildpackage -b
+    && dpkg-buildpackage -b \
     && sudo dpkg -i bladeRF.deb
 
 RUN sudo apt-get update
