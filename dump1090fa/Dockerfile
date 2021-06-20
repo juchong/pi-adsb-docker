@@ -15,7 +15,7 @@ RUN apt-get update -qy \
     pkg-config \
     libterm-readline-perl-perl \
     doxygen libtecla-dev \
-    libtecla1-dev \
+    libtecla-dev \
     libncurses5-dev \
     help2man pandoc
 
