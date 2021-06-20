@@ -1,4 +1,4 @@
-FROM balenalib/rpi-raspbian:buster
+FROM balenalib/debian:buster
 ENTRYPOINT []
 
 WORKDIR /root

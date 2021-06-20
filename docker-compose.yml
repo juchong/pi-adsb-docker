@@ -9,7 +9,7 @@ services:
     ports:
       - 9000:9000
   dump1090fa:
-    image: "filipjonckers/raspbian-dump1090fa"
+    image: "filipjonckers/debian-dump1090fa"
     build: ./dump1090fa
     container_name: dump1090fa
     restart: always
@@ -39,7 +39,7 @@ services:
     env_file:
       - ./tar1090/tar1090.conf
   piaware:
-    image: "filipjonckers/raspbian-flightaware"
+    image: "filipjonckers/debian-flightaware"
     build: ./flightaware
     container_name: piaware
     restart: always
@@ -51,7 +51,7 @@ services:
       - "30105:30105"
       - "30106:30106"
   fr24:
-    image: "filipjonckers/raspbian-flightradar24"
+    image: "filipjonckers/debian-flightradar24"
     build: ./fr24
     container_name: fr24
     restart: always
@@ -60,7 +60,7 @@ services:
     ports:
      - "8754:8754"
   adsbexchange:
-    image: "filipjonckers/raspbian-adsbexchange"
+    image: "filipjonckers/debian-adsbexchange"
     build: ./adsbexchange
     container_name: adsbexchange
     restart: always
@@ -69,14 +69,14 @@ services:
     environment:
       - CUSTOM_PORT=51051
   adsbhub:
-    image: "filipjonckers/raspbian-adsbhub"
+    image: "filipjonckers/debian-adsbhub"
     build: ./adsbhub
     container_name: adsbhub
     restart: always
     depends_on:
       -  dump1090fa
   opensky:
-    image: "filipjonckers/raspbian-opensky"
+    image: "filipjonckers/debian-opensky"
     build: ./opensky
     container_name: opensky
     restart: "always"
