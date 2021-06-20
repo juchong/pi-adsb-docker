@@ -13,7 +13,11 @@ RUN apt-get update -qy \
     libusb-1.0.0-dev \
     build-essential \
     pkg-config \
-    libterm-readline-perl-perl
+    libterm-readline-perl-perl \
+    doxygen libtecla-dev \
+    libtecla1-dev \
+    libncurses5-dev \
+    help2man pandoc
 
 # not needed to run dump1090-fa but could be useful for debugging issues
 RUN git clone git://git.osmocom.org/rtl-sdr.git \
