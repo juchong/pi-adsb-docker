@@ -6,7 +6,7 @@ WORKDIR /root
 
 RUN apt-get update && apt-get install -qy apt-utils inetutils-ping perl && apt-get clean
 
-ADD https://opensky-network.org/files/firmware/opensky-feeder_latest_armhf.deb opensky-feeder.deb
+ADD https://opensky-network.org/files/firmware/opensky-feeder_latest_amd64.deb opensky-feeder.deb
 
 RUN dpkg -x opensky-feeder.deb /
 
